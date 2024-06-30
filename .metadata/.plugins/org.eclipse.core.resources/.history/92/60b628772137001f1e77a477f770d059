@@ -1,0 +1,18 @@
+package com.TestProject.PageObj;
+
+import java.util.List;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class SignUpPage {
+	public static WebDriver driver = null;
+	@FindBy(xpath = "//div[@class='MuiStack-root css-e3zn88']")
+	static List<WebElement> Menu_Link;
+
+	public static void listOfMenuItems() {
+
+	}
+
+}

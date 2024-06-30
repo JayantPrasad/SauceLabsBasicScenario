@@ -1,0 +1,10 @@
+package com.TestProject.Utilty;
+
+import com.aventstack.extentreports.reporter.ExtentReporter;
+
+public class ExtentReportUtility 
+{
+
+	ExtentReporter esr= new ExtentSparkReporter(System.getProperty("C:\\Test\\TestSauceLabs\\Reports\\extentReport.html"));
+	esr.config().setReporterName("MyReport");
+}

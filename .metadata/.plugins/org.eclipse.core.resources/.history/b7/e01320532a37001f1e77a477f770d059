@@ -1,0 +1,40 @@
+package come.TestProject.TestScipts;
+
+import java.io.IOException;
+import com.TestProject.PageObj.*;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+import com.TestProject.Utilty.BrowserFact;
+import com.TestProject.Utilty.Configurations;
+import com.aventstack.extentreports.ExtentReports;
+public class TestCaseOne extends BrowserFact
+
+{ 
+	SignUpPage sgnPge;
+	static ExtentReports extentRep;
+	@BeforeMethod
+	public void beforeMethod() throws IOException {
+        String browser=Configurations.toGetProperty("Browser");
+        String url=Configurations.toGetProperty("URL");
+        
+		BrowserFact.selectBrowser(browser, url);
+		sgnPge = PageFactory.initElements(driver, SignUpPage.class);
+	}
+
+	@Test
+	public void testMenuItems() throws IOException {
+		String verificationValue=Configurations.toGetProperty("ButtonTest");
+		// test whether given button name in property file exists in the home page
+		sgnPge.listOfMenuItems(verificationValue);
+		//test sign up functionality
+		
+	}
+	
+	@AfterMethod
+	 public void afterMethod()
+	 {
+		BrowserFact.quitBrowser();
+	 }
+}

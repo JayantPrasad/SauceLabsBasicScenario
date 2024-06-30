@@ -1,0 +1,8 @@
+package com.TestProject.Utilty;
+
+public class Configurations {
+	
+	Properties prop=new Properties();
+	
+
+}

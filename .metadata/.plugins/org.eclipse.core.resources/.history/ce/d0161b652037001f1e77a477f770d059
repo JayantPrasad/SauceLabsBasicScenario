@@ -1,0 +1,15 @@
+package com.TestProject.PageObj;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class SignUpPage {
+	
+	@FindBy(xpath = "//div[@class='MuiStack-root css-e3zn88']")
+	static List<WebElement> username;
+	
+	
+	@FindBy(xpath = "//*[@id='dropdownItem']")
+	static List<WebElement> Menu_link;
+
+}

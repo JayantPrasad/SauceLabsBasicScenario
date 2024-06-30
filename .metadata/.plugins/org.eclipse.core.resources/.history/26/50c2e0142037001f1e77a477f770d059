@@ -1,0 +1,8 @@
+package com.TestProject.PageObj;
+
+public class SignUpPage {
+	
+	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_txtUserName']")
+	static WebElement username;
+
+}

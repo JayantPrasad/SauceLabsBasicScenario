@@ -1,0 +1,21 @@
+package com.TestProject.Utilty;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+
+public class Configurations {
+	WebDriver driver;
+	
+	public static String toGetProperty(String value,driver) throws IOException {
+	String path = System.getProperty("user.dir")+"//TestData//config.properties";
+	Properties prop=new Properties();
+	FileInputStream fis=new FileInputStream(path);
+	prop.load(fis);
+	driver.getProperty(value);
+	fis.close();
+	return value;
+	}
+}

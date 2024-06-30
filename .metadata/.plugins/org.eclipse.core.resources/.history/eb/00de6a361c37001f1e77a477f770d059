@@ -1,0 +1,38 @@
+package com.TestProject.Utilty;
+
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+
+public class Configurations {
+
+	public static String toGetProperty(String value) throws IOException {
+		 FileReader fr=new FileReader("C:\\\\Test\\\\TestSauceLabs\\\\TestData\\\\config.properties"); 
+	        Properties props=new Properties(); 
+	        props.load(fr);
+		props.getProperty(value);
+		fr.close();
+		return value;
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		String path = System.getProperty("C:\\Test\\TestSauceLabs\\TestData\\config.properties");
+		Properties prop = new Properties();
+		FileInputStream fis = new FileInputStream(path);
+		prop.load(fis);
+		((Properties) driver).getProperty(value);
+		fis.close();
+		return value;
+	}
+}

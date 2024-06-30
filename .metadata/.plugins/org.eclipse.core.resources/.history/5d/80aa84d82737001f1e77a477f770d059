@@ -1,0 +1,7 @@
+package com.TestProject.Utilty;
+
+public class ExtentReportUtility 
+{
+
+	ExtentSparkReporter esr= new ExtentSparkReporter();
+}

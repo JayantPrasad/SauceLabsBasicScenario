@@ -1,0 +1,12 @@
+package com.TestProject.Utilty;
+
+import java.util.Properties;
+
+public class Configurations {
+	
+	String path = System.getProperty("user.dir")+"//Testdata/Config.properties";
+	Properties prop=new Properties();
+	FileInputStreams fis=new FileInputStreams(path);
+	
+
+}

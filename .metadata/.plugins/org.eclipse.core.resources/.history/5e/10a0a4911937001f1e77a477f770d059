@@ -1,0 +1,22 @@
+package come.TestProject.TestScipts;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+import com.TestProject.Utilty.BrowserFact;
+
+public class TestCaseOne
+
+{
+	WebDriver driver;
+
+	@BeforeMethod
+	public void beforeMethod() {
+		BrowserFact.selectBrowser(driver, "chrome", "https://saucelabs.com/");
+	}
+
+	@Test
+	public void testMenuItems() {
+
+	}
+}

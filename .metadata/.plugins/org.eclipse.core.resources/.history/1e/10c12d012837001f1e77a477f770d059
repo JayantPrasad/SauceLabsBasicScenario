@@ -1,0 +1,9 @@
+package com.TestProject.Utilty;
+
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
+public class ExtentReportUtility 
+{
+
+	ExtentSparkReporter esr= new ExtentSparkReporter();
+}

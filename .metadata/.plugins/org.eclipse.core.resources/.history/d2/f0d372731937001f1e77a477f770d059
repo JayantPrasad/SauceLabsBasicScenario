@@ -1,0 +1,16 @@
+package com.TestProject.Utilty;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Properties;
+
+public class Configurations {
+	
+	public void toGetProperty(String value) throws FileNotFoundException {
+	String path = System.getProperty("user.dir")+"//Testdata/Config.properties";
+	Properties prop=new Properties();
+	FileInputStream fis=new FileInputStream(path);
+	prop.getProperty(value);
+	fis.close();
+	}
+}
